@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import api from '../services/api';
 
 function TaskForm({ onSubmit, onCancel, task = null }) {
@@ -106,5 +107,11 @@ function TaskForm({ onSubmit, onCancel, task = null }) {
     </div>
   );
 }
+
+TaskForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
+  task: PropTypes.object,
+};
 
 export default TaskForm;

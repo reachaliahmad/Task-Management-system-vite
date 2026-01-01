@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function TaskList({ tasks, user, onUpdate, onDelete, onEdit }) {
   const handleStatusChange = (taskId, newStatus) => {
     onUpdate(taskId, { status: newStatus });
@@ -92,5 +94,13 @@ function TaskList({ tasks, user, onUpdate, onDelete, onEdit }) {
     </div>
   );
 }
+
+TaskList.propTypes = {
+  tasks: PropTypes.array.isRequired,
+  user: PropTypes.object.isRequired,
+  onUpdate: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onEdit: PropTypes.func.isRequired,
+};
 
 export default TaskList;

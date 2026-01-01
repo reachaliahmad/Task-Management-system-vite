@@ -1,4 +1,6 @@
-function Dashboard({ tasks, user }) {
+import PropTypes from 'prop-types';
+
+function Dashboard({ tasks, user }) { // eslint-disable-line no-unused-vars
   const totalTasks = tasks.length;
   const completedTasks = tasks.filter(task => task.status === 'Completed').length;
   const inProgressTasks = tasks.filter(task => task.status === 'In Progress').length;
@@ -65,5 +67,10 @@ function Dashboard({ tasks, user }) {
     </div>
   );
 }
+
+Dashboard.propTypes = {
+  tasks: PropTypes.array.isRequired,
+  user: PropTypes.object.isRequired,
+};
 
 export default Dashboard;
