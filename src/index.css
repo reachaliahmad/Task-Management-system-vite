@@ -1,0 +1,126 @@
+/* Custom styles for Task Management System */
+/* Using Bootstrap 5 with custom purple/blue gradient theme */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Custom navbar styling */
+.navbar-custom {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Card styling with glassmorphism effect */
+.card-custom {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Status badges with colors */
+.badge-todo {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.badge-in-progress {
+  background-color: #0dcaf0;
+  color: #212529;
+}
+
+.badge-completed {
+  background-color: #198754;
+  color: white;
+}
+
+/* Button styling */
+.btn-custom {
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary-custom {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.btn-danger-custom {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+}
+
+/* Form styling */
+.form-control-custom {
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background: rgba(255, 255, 255, 0.8);
+  transition: border-color 0.3s ease;
+}
+
+.form-control-custom:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Task card specific styling */
+.task-card {
+  margin-bottom: 20px;
+}
+
+.task-card .card-body {
+  padding: 25px;
+}
+
+/* Stats cards */
+.stats-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.stats-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+
+  .navbar-custom {
+    margin-bottom: 20px;
+  }
+
+  .card-custom {
+    margin-bottom: 20px;
+  }
+}
